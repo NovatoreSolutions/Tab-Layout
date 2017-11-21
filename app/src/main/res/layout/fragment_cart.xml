@@ -1,0 +1,172 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.tabs.layout.CartFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+            android:id="@+id/car1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car1" />
+            <TextView
+            android:id="@+id/tvsparepartspec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/car1"
+            android:text="Honda Cvic Bumper Deffuser Model 2016-2017"
+            android:textColor="@color/customTextColor" />
+            <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvsparepartspec"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/car1"
+            android:text="Quantity"
+            android:textColor="@color/customTextColor" />
+            <Spinner
+                android:id="@+id/quantityspinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvsparepartspec"
+                android:layout_toRightOf="@id/tvQuantity"
+                android:entries="@array/item_quantity"
+                >
+            </Spinner>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantityspinner"
+            android:layout_toRightOf="@id/car1"
+            android:inputType="numberDecimal"
+            android:padding="20dp"
+            android:text="14000"
+            android:textColor="@color/customTextColor" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark">
+            <TextView
+            android:id="@+id/tvsubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Sub Total"
+            android:textColor="@color/customTextColor" />
+            <TextView
+            android:id="@+id/tvtotalitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@id/tvsubtotal"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="1 Item"
+            android:textColor="@color/customTextColor" />
+            <TextView
+            android:id="@+id/tvprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@id/tvtotalitem"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Rs. 12000"
+            android:textColor="@color/customTextColor" />
+            <TextView
+            android:id="@+id/tvshipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvsubtotal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Shipping"
+            android:textColor="@color/customTextColor" />
+            <TextView
+            android:id="@+id/tvaddressmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvshipping"
+            android:layout_below="@id/tvsubtotal"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tvshipping"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Shipping cost will be calculated once you will provide your address"
+            android:textColor="@color/customTextColor"
+            android:textSize="10dp" />
+            <TextView
+            android:id="@+id/tvtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvshipping"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Total"
+            android:textColor="@color/customTextColor"
+            android:textSize="30dp" />
+            <TextView
+            android:id="@+id/tvtotalprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvtotal"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Rs 14000"
+            android:textAlignment="center"
+            android:textColor="@color/customTextColor"
+            android:textSize="20dp" />
+            <Button
+            android:id="@+id/bcheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvtotalprice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/customTextColor"
+            android:text="Proceed To Checkout"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+            <Button
+            android:id="@+id/bcalltoorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bcheckout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/customTextColor"
+            android:text="Call to Order"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+            <Button
+            android:id="@+id/bremove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bcalltoorder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_style"
+            android:backgroundTint="@color/customTextColor"
+            android:text="Remove"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

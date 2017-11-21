@@ -1,0 +1,89 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.tabs.layout.AddressFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+        android:id="@+id/tvaddAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:text="Add New Address"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+        <EditText
+        android:id="@+id/etfirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvaddAddress"
+        android:layout_marginTop="40dp"
+        android:hint="First Name"
+        android:padding="10dp" />
+        <EditText
+        android:id="@+id/etlastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etfirstname"
+        android:layout_marginTop="40dp"
+        android:hint="Last Name"
+        android:padding="10dp" />
+        <EditText
+        android:id="@+id/etaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etlastname"
+        android:layout_marginTop="40dp"
+        android:hint="Address"
+        android:padding="10dp" />
+        <EditText
+        android:id="@+id/etaddress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etaddress"
+        android:layout_marginTop="40dp"
+        android:hint="Address_2"
+        android:padding="10dp" />
+        <TextView
+        android:id="@+id/tvPakistan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etaddress2"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:text="Pakistan" />
+        <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPakistan"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:text="City" />
+        <Spinner
+            android:id="@+id/Cityspinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvCity"
+            android:entries="@array/city"
+            >
+        </Spinner>
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textColor="@color/customTextColor"
+        android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
